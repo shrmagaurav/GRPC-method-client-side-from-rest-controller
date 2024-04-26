@@ -26,8 +26,8 @@ public class UserDao {
 
     public UserEntity insert(UserEntity entity) {
         LOGGER.info("Entity Saved");
-//        return repository.save(entity);
-        return insert1();
+        return repository.save(entity);
+
     }
 
     public List<UserEntity> getAll() {
@@ -36,9 +36,6 @@ public class UserDao {
 
     }
 
-    public UserEntity insert1() {
-        return repository.save(new UserEntity("Vaishnavy", "Upadhyay", 23, "admin"));
-    }
 
 
 }
